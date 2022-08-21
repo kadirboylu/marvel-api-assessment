@@ -1,6 +1,6 @@
-# Math Game
+# Marvel API Assessment
 
-A Math Game built with React.
+A Marvel web app built with React.
 
 [See Demo App on Netlify](#)
 
