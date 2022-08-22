@@ -17,11 +17,10 @@ const Card = () => {
             minus et, laboriosam voluptatum dolorem recusandae voluptas at.
             Dolor maiores, reiciendis assumenda atque nobis earum architecto.
           </p>
-          <div className={styles.seeMore}>
-            <a href="#">
-              <CgArrowLongRight />
-            </a>
-          </div>
+          <a href="#">
+            Click to see more
+            <CgArrowLongRight className={styles.icon} />
+          </a>
         </div>
       </div>
     </div>

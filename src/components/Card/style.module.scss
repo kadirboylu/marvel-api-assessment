@@ -34,7 +34,10 @@
   a {
     text-decoration: none;
     color: white;
-    font-size: 32px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -60,9 +63,10 @@
   opacity: 0;
 }
 
-.seeMore {
-  width: 95%;
-  text-align: right;
+.icon {
+  font-size: 24px;
+  margin-left: 1rem;
+  animation: arrow 2s infinite;
 }
 
 .info {
@@ -88,5 +92,17 @@
 
   h2 {
     margin: 1rem 0;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
   }
 }
