@@ -6,7 +6,7 @@
   height: 350px;
   background-color: rgb(40, 40, 40);
   color: white;
-  border-radius: 20px 0 20px 0;
+  border-radius: 40px 0 40px 0;
   user-select: none;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.75);
   overflow: hidden;
@@ -28,7 +28,7 @@
     width: 100%;
     height: auto;
     border: 3px solid #f0141e;
-    border-radius: 20px 0 20px 0;
+    border-radius: 40px 0 40px 0;
   }
 
   a {
@@ -42,7 +42,6 @@
 }
 
 .heroCaption {
-  border-radius: 20px 0 20px 0;
   position: absolute;
   top: 10px;
   bottom: 0;
