@@ -3,7 +3,7 @@
   margin: 1rem;
   padding: 1rem;
   width: 300px;
-  height: 350px;
+  height: 520px;
   background-color: rgb(40, 40, 40);
   color: white;
   border-radius: 40px 0 40px 0;
@@ -15,7 +15,7 @@
     text-align: center;
     font-family: "Bungee", cursive;
     font-size: 24px;
-    line-height: 50px;
+    line-height: 40px;
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -41,9 +41,16 @@
   }
 }
 
+.title {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .heroCaption {
   position: absolute;
-  top: 10px;
+  top: 0;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -75,8 +82,8 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   line-height: 20px;
-  max-height: 250px;
-  -webkit-line-clamp: 7;
+  max-height: 500px;
+  -webkit-line-clamp: 12;
   -webkit-box-orient: vertical;
 }
 
@@ -90,6 +97,10 @@
   }
 
   h2 {
+    margin: 1rem 0;
+  }
+
+  .title {
     margin: 1rem 0;
   }
 }
