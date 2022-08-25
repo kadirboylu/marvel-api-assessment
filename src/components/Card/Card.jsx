@@ -8,7 +8,7 @@ const Card = ({ character }) => {
     <div className={`${styles.base} ${styles["slide-in"]}`}>
       {/* Character Img */}
       <img
-        src={`${character.thumbnail.path}/portrait_xlarge.${character.thumbnail.extension}`}
+        src={`${character.thumbnail.path}/portrait_incredible.${character.thumbnail.extension}`}
         alt="character-img"
       />
       <div className={styles.heroCaption}>
