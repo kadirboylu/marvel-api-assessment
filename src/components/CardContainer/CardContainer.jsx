@@ -21,7 +21,6 @@ const CardContainer = () => {
       hasMore={true}
       next={() => dispatch(loadMore(offset))}
       loader={<Loading />}
-      pullDownToRefreshThreshold={1000}
     >
       <div className={styles.container}>
         {characters.map((character, index) => {
