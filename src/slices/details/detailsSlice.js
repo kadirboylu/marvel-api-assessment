@@ -39,7 +39,6 @@ const detailsSlice = createSlice({
     [getComics.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.comics = action.payload;
-      console.log(state.comics);
     },
     [getComics.rejected]: (state) => {
       state.isLoading = false;
