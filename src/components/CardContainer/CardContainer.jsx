@@ -19,8 +19,8 @@ const CardContainer = () => {
   return (
     <InfiniteScroll
       dataLength={characters.length}
-      hasMore={offset < total ? true : false}
-      next={() => (offset < total ? dispatch(loadMore(offset)) : "")}
+      hasMore={offset < total && total > 30 ? true : false}
+      next={() => offset < total && dispatch(loadMore(offset))}
       loader={<Loading />}
     >
       <div className={styles.container}>
