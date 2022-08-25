@@ -30,7 +30,11 @@ const CharacterDetail = () => {
         className={styles["character-img"]}
       />
       <h2>{character.name}</h2>
-      <p className={styles.description}>{character.description}</p>
+      <p className={styles.description}>
+        {character.description == false
+          ? "No description given"
+          : character.description}
+      </p>
       <h2>COMICS</h2>
       {isLoading ? <Loading /> : <ComicContainer />}
     </div>
