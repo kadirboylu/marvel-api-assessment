@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import debounce from "lodash.debounce";
 import logo from "@/assets/img/marvel-logo.png";
 import styles from "./style.module.scss";
 import { GoSearch } from "react-icons/go";
@@ -9,11 +10,15 @@ const Header = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
 
-  const onSearch = (q) => {
-    setText(q);
-    dispatch(setQuery(q));
+  useEffect(() => {
+    if (text === "") return;
+    dispatch(setQuery(text));
     dispatch(reset());
-  };
+  }, [text]);
+
+  const updateQuery = (e) => setText(e.target.value);
+
+  const debouncedOnChange = debounce(updateQuery, 500);
 
   return (
     <header>
@@ -24,8 +29,7 @@ const Header = () => {
           className={styles["search-bar"]}
           type="text"
           placeholder="Search heroes"
-          onChange={(e) => onSearch(e.target.value)}
-          value={text}
+          onChange={debouncedOnChange}
         />
       </div>
     </header>
