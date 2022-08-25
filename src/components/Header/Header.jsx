@@ -11,14 +11,13 @@ const Header = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (text === "") return;
     dispatch(setQuery(text));
-    dispatch(reset());
+    dispatch(reset()); // reset the characters, queryResult and offset when the query changes
   }, [text]);
 
-  const updateQuery = (e) => setText(e.target.value);
+  const updateQuery = (e) => setText(e.target.value); // update the query when the user types in the search bar
 
-  const debouncedOnChange = debounce(updateQuery, 500);
+  const debouncedOnChange = debounce(updateQuery, 500); // debounce the search input to prevent unnecessary requests
 
   return (
     <header>
