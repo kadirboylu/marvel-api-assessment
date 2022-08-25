@@ -12,7 +12,6 @@ const CardContainer = () => {
 
   useEffect(() => {
     dispatch(getCharacters(offset));
-    console.log(offset);
   }, [offset]);
 
   return (

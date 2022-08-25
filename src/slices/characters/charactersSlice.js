@@ -17,7 +17,6 @@ export const getCharacters = createAsyncThunk(
     try {
       const result = await axios(`https://gateway.marvel.com/v1/public/cha
 racters?ts=1&limit=30&offset=${offset}&apikey=${publicKey}&hash=${hash}`);
-      console.log(result.data.data.results);
       return result.data.data.results;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
