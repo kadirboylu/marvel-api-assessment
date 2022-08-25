@@ -25,7 +25,6 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     line-height: 20px;
-    max-height: 150px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
@@ -59,6 +58,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 40px 0 40px 0;
   background-color: rgb(40, 40, 40);
   padding: 0px 15px;
   transform: translateY(80%);
@@ -94,6 +94,7 @@
 
   h4 {
     padding: 1rem 0;
+    -webkit-line-clamp: 3;
   }
 }
 
