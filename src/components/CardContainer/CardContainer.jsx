@@ -8,17 +8,19 @@ import Loading from "../Loading/Loading";
 
 const CardContainer = () => {
   const dispatch = useDispatch();
-  const { characters, offset } = useSelector((store) => store.characters);
+  const { characters, offset, query, total } = useSelector(
+    (store) => store.characters
+  );
 
   useEffect(() => {
-    dispatch(getCharacters(offset));
-  }, [offset]);
+    dispatch(getCharacters({ offset, query }));
+  }, [offset, query]);
 
   return (
     <InfiniteScroll
       dataLength={characters.length}
-      hasMore={true}
-      next={() => dispatch(loadMore(offset))}
+      hasMore={offset < total ? true : false}
+      next={() => (offset < total ? dispatch(loadMore(offset)) : "")}
       loader={<Loading />}
     >
       <div className={styles.container}>
