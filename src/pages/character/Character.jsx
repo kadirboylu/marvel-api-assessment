@@ -1,5 +1,7 @@
+import CharacterDetail from "@/components/CharacterDetail";
+
 const Character = () => {
-  return <div>Character</div>;
+  return <CharacterDetail />;
 };
 
 export default Character;
