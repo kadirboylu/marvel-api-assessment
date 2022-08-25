@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
+import { Link } from "react-router-dom";
 import { CgArrowLongRight } from "react-icons/cg";
 
 const Card = ({ character }) => {
@@ -19,10 +20,10 @@ const Card = ({ character }) => {
               ? "No description given."
               : character.description}
           </p>
-          <a href="#">
+          <Link to="/character">
             Click to see more
             <CgArrowLongRight className={styles.icon} />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

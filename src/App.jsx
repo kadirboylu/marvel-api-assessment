@@ -1,14 +1,13 @@
-import Header from "@/components/Header";
-import CardContainer from "@/components/CardContainer";
+import { Route, Routes } from "react-router-dom";
+import Home from "@/pages/Home";
+import Character from "@/pages/Character";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <div className="heroes">
-        <CardContainer />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/character" element={<Character />} />
+    </Routes>
   );
 }
 
