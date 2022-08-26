@@ -15,9 +15,9 @@ A Marvel web app built with React.
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/) for routing
 - [SASS](https://sass-lang.com/guide) and [CSS modules](https://github.com/css-modules/css-modules) for styling
-- Redux Toolkit for state management
-- Axios for making API calls
-- Loadash.debounce for debouncing search input
+- [Redux Toolkit](https://redux-toolkit.js.org/) for state management
+- [Axios](https://axios-http.com/docs/intro) for making API calls
+- [Loadash.debounce](https://www.npmjs.com/package/lodash.debounce) for debouncing search input
 
 ## Usage
 
