@@ -14,13 +14,14 @@ const CharacterDetail = () => {
 
   useEffect(() => {
     dispatch(reset()); // reset character, offset and query
-    dispatch(getComics(character.id));
+    dispatch(getComics(character.id)); // fetch comics for the character
   }, [character.id]);
 
   return (
     <div className={styles.base}>
       <div className={styles["go-back"]}>
         <Link to="/" className={styles.link}>
+          {/* Go back to home page */}
           <CgArrowLongLeft className={styles.icon} />
         </Link>
       </div>
@@ -31,9 +32,12 @@ const CharacterDetail = () => {
       />
       <h2>{character.name}</h2>
       <p className={styles.description}>
-        {character.description == false
-          ? "No description given"
-          : character.description}
+        {
+          // if description is empty, display "No description"
+          character.description == false
+            ? "No description given"
+            : character.description
+        }
       </p>
       <h2>COMICS</h2>
       {isLoading ? <Loading /> : <ComicContainer />}

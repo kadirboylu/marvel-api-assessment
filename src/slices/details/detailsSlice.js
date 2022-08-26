@@ -2,20 +2,20 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  character: {},
-  comics: [],
-  isLoading: true,
+  character: {}, // character object
+  comics: [], // array of comics
+  isLoading: true, // boolean to show loading spinner
 };
 
-const hash = import.meta.env.VITE_HASH;
-const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+const hash = import.meta.env.VITE_HASH; // hash from env
+const publicKey = import.meta.env.VITE_PUBLIC_KEY; // public key from env
 
 export const getComics = createAsyncThunk(
   "details/getComics",
   async (id, thunkAPI) => {
     try {
       const result = await axios(
-        `https://gateway.marvel.com/v1/public/characters/${id}/comics?ts=1&limit=10&&apikey=${publicKey}&hash=${hash}`
+        `https://gateway.marvel.com/v1/public/characters/${id}/comics?ts=1&limit=10&&apikey=${publicKey}&hash=${hash}` // get comics for character with id
       );
       return result.data.data.results;
     } catch (error) {
@@ -29,7 +29,7 @@ const detailsSlice = createSlice({
   initialState,
   reducers: {
     setCharacter: (state, action) => {
-      state.character = action.payload;
+      state.character = action.payload; // set character object
     },
   },
   extraReducers: {

@@ -14,9 +14,12 @@ const ComicCard = ({ comic }) => {
           <h4>{comic.title}</h4>
         </div>
         <p className={styles["description"]}>
-          {comic.description === "" || comic.description === null
-            ? "No description given"
-            : comic.description}
+          {
+            // if description is empty, display "No description"
+            comic.description === "" || comic.description === null
+              ? "No description given"
+              : comic.description
+          }
         </p>
         <a
           className={styles["see-more"]}
