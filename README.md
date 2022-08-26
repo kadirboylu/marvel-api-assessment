@@ -26,7 +26,7 @@ A Marvel web app built with React.
 Go to project root directory and run:
 
 ```
-  cp .env.example .env
+cp .env.example .env
 ```
 
 This will create an .env file with needed fields in root directory.
